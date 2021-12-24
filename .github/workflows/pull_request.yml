@@ -33,7 +33,7 @@ jobs:
           python3 run_check.py
   DockerHubPush:
     needs: CheckLabels
-    runs-on: [self-hosted, style-checker]
+    runs-on: [self-hosted, func-tester-aarch64]
     steps:
       - name: Clear repository
         run: |
