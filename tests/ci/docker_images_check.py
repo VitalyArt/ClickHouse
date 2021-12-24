@@ -125,7 +125,7 @@ def build_and_push_one_image(
         "w",
     ) as pl:
         cmd = (
-            f"docker buildx build --platform linux/arm64,linux/amd64 "
+            f"docker buildx build --builder default "
             f"--tag {image_name}:{version_string} --push {path}"
         )
         logging.info("Docker command to run: %s", cmd)
